@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xs9-yT-tR6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="Kud-lc-CTq">
+            <objects>
+                <viewController storyboardIdentifier="LaunchScreenViewController" id="hc5-zt-sLR" customClass="LaunchScreenViewController" customModule="FanFare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Gb-uz-MLK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pib-8e-gEY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ne4-fZ-GeE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xFH-fS-buk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510" y="122"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="WbT-Cj-X7l">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="dhv-pT-tZ2" customClass="LoginViewController" customModule="FanFare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZm-Q1-5Yt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ShZ-A1-6wh" customClass="LogInUISwitch" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="266" y="726" width="51" height="32"/>
+                                <color key="onTintColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Bose Device?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIq-v0-T6W" customClass="LogInText" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="99" y="732" width="159" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="USV-vB-F2M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4F-NY-ESh" customClass="LogInButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="30" y="494" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WyB-aC-Ndc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="33"/>
+                                <state key="normal" title="LOG IN"/>
+                                <connections>
+                                    <action selector="signinTapped:" destination="dhv-pT-tZ2" eventType="touchUpInside" id="ema-ey-dbO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s4F-NY-ESh" firstAttribute="centerX" secondItem="mZm-Q1-5Yt" secondAttribute="centerX" id="Jzq-ch-y9h"/>
+                            <constraint firstItem="boi-ny-UlC" firstAttribute="bottom" secondItem="ShZ-A1-6wh" secondAttribute="bottom" constant="104" id="MbD-Cz-I54"/>
+                            <constraint firstItem="AIq-v0-T6W" firstAttribute="centerY" secondItem="ShZ-A1-6wh" secondAttribute="centerY" id="QUZ-dh-deW"/>
+                            <constraint firstItem="s4F-NY-ESh" firstAttribute="top" secondItem="boi-ny-UlC" secondAttribute="top" constant="450" id="Wpc-wx-ywn"/>
+                            <constraint firstItem="boi-ny-UlC" firstAttribute="bottom" secondItem="AIq-v0-T6W" secondAttribute="bottom" constant="110" id="cRS-FX-JNL"/>
+                            <constraint firstItem="ShZ-A1-6wh" firstAttribute="leading" secondItem="AIq-v0-T6W" secondAttribute="trailing" constant="8" symbolic="YES" id="ePq-UR-kXT"/>
+                            <constraint firstItem="s4F-NY-ESh" firstAttribute="leading" secondItem="boi-ny-UlC" secondAttribute="leading" constant="30" id="gME-0X-d2h"/>
+                            <constraint firstItem="boi-ny-UlC" firstAttribute="trailing" secondItem="ShZ-A1-6wh" secondAttribute="trailing" constant="99" id="lma-nW-5EN"/>
+                            <constraint firstItem="AIq-v0-T6W" firstAttribute="leading" secondItem="boi-ny-UlC" secondAttribute="leading" constant="99" id="ooN-Pp-y5y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="boi-ny-UlC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L7z-yA-SiI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7O-jo-qWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389.85507246376812" y="121.875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KSx-at-pQv">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="xs9-yT-tR6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T1U-ON-SnD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hc5-zt-sLR" kind="relationship" relationship="rootViewController" id="KcY-iT-49h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKm-Gw-x5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1391" y="122"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="MUR-vh-eX7">
+            <objects>
+                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="s1o-xM-tPq" customClass="LeftPanelViewController" customModule="FanFare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ynS-1V-UHm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="In9-OD-6MD" customClass="ImageButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="20" y="787" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CoT-Wg-AmQ"/>
+                                    <constraint firstAttribute="width" constant="30" id="PMs-yQ-5e5"/>
+                                </constraints>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOut:" destination="s1o-xM-tPq" eventType="touchUpInside" id="JO3-3Z-QBM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdi-Y2-hYY" customClass="LeftPanelTitleText" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="20" y="62" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ALg-am-RwD"/>
+                                    <constraint firstAttribute="height" constant="50" id="AYJ-wk-Cka"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="vMZ-C1-R2V"/>
+                                    <constraint firstAttribute="width" constant="300" id="wyX-xw-Vee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeP-k3-FQD" customClass="LeftPanelNotImportantText" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="20" y="136" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpM-Fu-SuB" customClass="LeftPanelNotImportantText" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="108" y="136" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49e-tY-ss5" customClass="leftLabelButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="70" y="172" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Wd2-io-a8g"/>
+                                    <constraint firstAttribute="width" constant="150" id="zW9-0V-BJz"/>
+                                </constraints>
+                                <state key="normal" title="Switch Device"/>
+                                <connections>
+                                    <action selector="switchDevice:" destination="s1o-xM-tPq" eventType="touchUpInside" id="mIw-Ac-6Vc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh6-h2-796" customClass="leftLogOutButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="70" y="787" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jrh-0I-rBB"/>
+                                </constraints>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOut:" destination="s1o-xM-tPq" eventType="touchUpInside" id="kSg-I0-VQz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHO-Bp-c2y" customClass="leftLabelButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="69" y="216" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nFV-Oq-XYx"/>
+                                    <constraint firstAttribute="width" constant="200" id="vC0-1k-8ja"/>
+                                </constraints>
+                                <state key="normal" title="Disconnect Device"/>
+                                <connections>
+                                    <action selector="disconnectDevice:" destination="s1o-xM-tPq" eventType="touchUpInside" id="nMy-pb-FgL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT3-j6-TFm" userLabel="OffImage" customClass="ImageButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="20" y="216" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OrN-QK-rfB"/>
+                                    <constraint firstAttribute="width" constant="30" id="kVI-kP-mRz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="disconnectDevice:" destination="s1o-xM-tPq" eventType="touchUpInside" id="otc-fV-uMZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSx-5o-31R" userLabel="SwitchImage" customClass="ImageButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="20" y="172" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OSp-wg-BvP"/>
+                                    <constraint firstAttribute="width" constant="30" id="yDu-iS-QFv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="switchDevice:" destination="s1o-xM-tPq" eventType="touchUpInside" id="GDa-wm-1oa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lpM-Fu-SuB" firstAttribute="leading" secondItem="qeP-k3-FQD" secondAttribute="trailing" constant="8" symbolic="YES" id="09n-8P-nic"/>
+                            <constraint firstItem="xSx-5o-31R" firstAttribute="top" secondItem="49e-tY-ss5" secondAttribute="top" id="3tB-9q-HVj"/>
+                            <constraint firstItem="xSx-5o-31R" firstAttribute="leading" secondItem="oT3-j6-TFm" secondAttribute="leading" id="CQS-Lx-AMG"/>
+                            <constraint firstItem="Kdi-Y2-hYY" firstAttribute="top" secondItem="Jev-zy-f3I" secondAttribute="top" constant="18" id="GUW-tb-tAw"/>
+                            <constraint firstItem="Jev-zy-f3I" firstAttribute="bottom" secondItem="In9-OD-6MD" secondAttribute="bottom" constant="45" id="GcH-la-MZX"/>
+                            <constraint firstItem="qeP-k3-FQD" firstAttribute="baseline" secondItem="lpM-Fu-SuB" secondAttribute="baseline" id="H4J-3p-YZS"/>
+                            <constraint firstItem="qeP-k3-FQD" firstAttribute="leading" secondItem="xSx-5o-31R" secondAttribute="leading" id="Hwx-RU-LPr"/>
+                            <constraint firstItem="oT3-j6-TFm" firstAttribute="top" secondItem="xSx-5o-31R" secondAttribute="bottom" constant="14" id="OcN-iH-LYM"/>
+                            <constraint firstItem="49e-tY-ss5" firstAttribute="leading" secondItem="xSx-5o-31R" secondAttribute="trailing" constant="20" id="OdO-nl-XsQ"/>
+                            <constraint firstItem="oT3-j6-TFm" firstAttribute="top" secondItem="GHO-Bp-c2y" secondAttribute="top" id="V98-AS-E1F"/>
+                            <constraint firstItem="qeP-k3-FQD" firstAttribute="top" secondItem="Kdi-Y2-hYY" secondAttribute="bottom" constant="24" id="WkR-1b-8t8"/>
+                            <constraint firstItem="xSx-5o-31R" firstAttribute="top" secondItem="qeP-k3-FQD" secondAttribute="bottom" constant="15" id="czj-cV-lsB"/>
+                            <constraint firstItem="Kdi-Y2-hYY" firstAttribute="leading" secondItem="ynS-1V-UHm" secondAttribute="leadingMargin" id="gJK-pA-k79"/>
+                            <constraint firstItem="Kdi-Y2-hYY" firstAttribute="leading" secondItem="qeP-k3-FQD" secondAttribute="leading" id="iFR-Rq-hmW"/>
+                            <constraint firstItem="GHO-Bp-c2y" firstAttribute="leading" secondItem="oT3-j6-TFm" secondAttribute="trailing" constant="19" id="lU5-dO-rww"/>
+                            <constraint firstItem="49e-tY-ss5" firstAttribute="leading" secondItem="bh6-h2-796" secondAttribute="leading" id="lcr-VT-uPt"/>
+                            <constraint firstItem="In9-OD-6MD" firstAttribute="leading" secondItem="Jev-zy-f3I" secondAttribute="leading" constant="20" id="oQV-KS-cB0"/>
+                            <constraint firstItem="In9-OD-6MD" firstAttribute="top" secondItem="bh6-h2-796" secondAttribute="top" id="v1j-qz-g8g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jev-zy-f3I"/>
+                    </view>
+                    <connections>
+                        <outlet property="deviceOutput" destination="lpM-Fu-SuB" id="vm8-Mi-Tn1"/>
+                        <outlet property="disconnectDeviceImage" destination="oT3-j6-TFm" id="72x-ul-6vB"/>
+                        <outlet property="disconnectDeviceOutput" destination="GHO-Bp-c2y" id="Nw8-hL-ehT"/>
+                        <outlet property="logOutButton" destination="In9-OD-6MD" id="vDN-cv-136"/>
+                        <outlet property="selfNameOutlet" destination="Kdi-Y2-hYY" id="gRU-Il-tCT"/>
+                        <outlet property="switchDeviceImage" destination="xSx-5o-31R" id="e7i-MS-pbs"/>
+                        <outlet property="switchDeviceOutput" destination="49e-tY-ss5" id="5Oh-Cn-zRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSK-fm-PZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1391" y="863"/>
+        </scene>
+        <!--Right View Controller-->
+        <scene sceneID="P6T-c6-aUS">
+            <objects>
+                <viewController storyboardIdentifier="RightViewController" title="Right View Controller" id="GjR-8A-5WX" customClass="RightPanelViewController" customModule="FanFare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3g3-Nh-Dou">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KC9-84-7Yx" userLabel="GroupView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KC9-84-7Yx" secondAttribute="bottom" id="0ys-55-SEd"/>
+                            <constraint firstItem="KC9-84-7Yx" firstAttribute="trailing" secondItem="jPJ-If-PyT" secondAttribute="trailing" id="CQT-7O-iQg"/>
+                            <constraint firstItem="KC9-84-7Yx" firstAttribute="top" secondItem="3g3-Nh-Dou" secondAttribute="top" id="S8S-aH-eG8"/>
+                            <constraint firstItem="KC9-84-7Yx" firstAttribute="leading" secondItem="jPJ-If-PyT" secondAttribute="leading" id="pcV-Ru-hLQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jPJ-If-PyT"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="KC9-84-7Yx" id="WVz-eA-Q1V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyc-JM-F2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="863"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="mps-LF-Dap">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="PNl-8h-Oo6" customClass="MainViewController" customModule="FanFare" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MuM-ZT-SvI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" wantsMultisampling="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nxF-fJ-o1e" userLabel="ArScnView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-QG-hCd" customClass="ImageButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="177" y="782" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="08G-q1-IS7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="F3O-WA-xvu"/>
+                                    <constraint firstAttribute="height" constant="60" id="pP2-zT-XCT"/>
+                                    <constraint firstAttribute="width" constant="60" id="x8q-Dr-Kt4"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="playButtonAction:" destination="PNl-8h-Oo6" eventType="touchUpInside" id="vPJ-rM-ZY4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPL-be-cc1" customClass="ImageButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="9EM-0q-suj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="NZC-d7-F79"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ghw-H6-CWd"/>
+                                    <constraint firstAttribute="height" constant="30" id="mni-8m-YwP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="menuButtonAction:" destination="PNl-8h-Oo6" eventType="touchUpInside" id="Osz-hn-St4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-hY-tr4" customClass="ImageButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="364" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="75n-Ac-Y85"/>
+                                    <constraint firstAttribute="width" constant="30" id="BEe-rJ-Tgg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="g05-kk-XlP"/>
+                                    <constraint firstAttribute="height" constant="30" id="g9A-lT-Sl7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rightButtonAction:" destination="PNl-8h-Oo6" eventType="touchUpInside" id="ndT-s0-YiH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUw-Vu-wN8" userLabel="ResetButton" customClass="ImageButton" customModule="FanFare" customModuleProvider="target">
+                                <rect key="frame" x="192" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="69D-tC-x7S"/>
+                                    <constraint firstAttribute="height" constant="30" id="IG0-zV-p8b"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="PNl-8h-Oo6" eventType="touchUpInside" id="970-vm-oAd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8k-If-Zf6">
+                                <rect key="frame" x="37" y="778" width="111" height="69"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordButtonAction:" destination="PNl-8h-Oo6" eventType="touchUpInside" id="Ojf-Ml-tB3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oPL-be-cc1" firstAttribute="leading" secondItem="5EZ-Mx-Nqv" secondAttribute="leading" constant="20" id="4mZ-wb-1b5"/>
+                            <constraint firstItem="oPL-be-cc1" firstAttribute="top" secondItem="5EZ-Mx-Nqv" secondAttribute="top" constant="20" id="Abi-UO-T1e"/>
+                            <constraint firstItem="qUw-Vu-wN8" firstAttribute="top" secondItem="5EZ-Mx-Nqv" secondAttribute="top" constant="20" id="Cp0-pt-P6y"/>
+                            <constraint firstItem="O8k-If-Zf6" firstAttribute="centerY" secondItem="K4R-QG-hCd" secondAttribute="centerY" id="Dbk-ZZ-yIy"/>
+                            <constraint firstItem="K4R-QG-hCd" firstAttribute="leading" secondItem="O8k-If-Zf6" secondAttribute="trailing" constant="29" id="E2I-8B-o5d"/>
+                            <constraint firstItem="5EZ-Mx-Nqv" firstAttribute="trailing" secondItem="0gg-hY-tr4" secondAttribute="trailing" constant="20" id="Ezr-WS-5Gl"/>
+                            <constraint firstItem="5EZ-Mx-Nqv" firstAttribute="bottom" secondItem="K4R-QG-hCd" secondAttribute="bottom" constant="20" id="JUs-Qp-E8N"/>
+                            <constraint firstItem="nxF-fJ-o1e" firstAttribute="trailing" secondItem="5EZ-Mx-Nqv" secondAttribute="trailing" id="KPu-GB-ftE"/>
+                            <constraint firstItem="nxF-fJ-o1e" firstAttribute="top" secondItem="MuM-ZT-SvI" secondAttribute="top" id="MHd-32-tpn"/>
+                            <constraint firstItem="5EZ-Mx-Nqv" firstAttribute="bottom" secondItem="O8k-If-Zf6" secondAttribute="bottom" constant="15" id="PuU-HI-SON"/>
+                            <constraint firstItem="qUw-Vu-wN8" firstAttribute="centerX" secondItem="MuM-ZT-SvI" secondAttribute="centerX" id="UjD-4F-hGq"/>
+                            <constraint firstItem="nxF-fJ-o1e" firstAttribute="leading" secondItem="5EZ-Mx-Nqv" secondAttribute="leading" id="VBq-9P-nnY"/>
+                            <constraint firstItem="O8k-If-Zf6" firstAttribute="leading" secondItem="5EZ-Mx-Nqv" secondAttribute="leading" constant="37" id="XFC-aN-sGB"/>
+                            <constraint firstItem="K4R-QG-hCd" firstAttribute="centerX" secondItem="MuM-ZT-SvI" secondAttribute="centerX" id="kgj-HP-27x"/>
+                            <constraint firstItem="0gg-hY-tr4" firstAttribute="top" secondItem="5EZ-Mx-Nqv" secondAttribute="top" constant="20" id="qVe-PO-Uma"/>
+                            <constraint firstAttribute="bottom" secondItem="nxF-fJ-o1e" secondAttribute="bottom" id="vgZ-SE-nOt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5EZ-Mx-Nqv"/>
+                    </view>
+                    <connections>
+                        <outlet property="arScnView" destination="nxF-fJ-o1e" id="pCc-CY-bgW"/>
+                        <outlet property="menuButton" destination="oPL-be-cc1" id="qyS-vk-Cao"/>
+                        <outlet property="playButton" destination="K4R-QG-hCd" id="z6h-Dh-NHH"/>
+                        <outlet property="recordButton" destination="O8k-If-Zf6" id="oBa-qs-WEC"/>
+                        <outlet property="resetButton" destination="qUw-Vu-wN8" id="6LF-JF-lZV"/>
+                        <outlet property="rightButton" destination="0gg-hY-tr4" id="BNZ-HK-rbJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAp-FP-fSK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510.14492753623193" y="862.5"/>
+        </scene>
+    </scenes>
+</document>
